@@ -1,0 +1,14 @@
+{application, durden_examples,
+ [
+  {description, ""},
+  {vsn, "0.0.1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib,
+                  cowboy,
+                  durden
+                 ]},
+  % {mod, {durden_examples_app, []} },
+  {env, []}
+ ]}.
