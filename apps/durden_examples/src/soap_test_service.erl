@@ -6,7 +6,7 @@
 -soap_target_ns("http://rgafiyatullin.github.com/test-service").
 -soap_service_name("TestService").
 
--soap_actions(['GetUserByID'/1]).
+-soap_actions(['GetUserByID'/1, 'StoreUser'/2]).
 
 -type phone_numbers() :: [ string() ].
 
@@ -21,7 +21,13 @@
 'GetUserByID'( ID ) ->
 	#'User'{
 		'ID' = ID,
-		'Name' = "Test User",
-		'YearOfBirth' = 1988,
+		'Name' = "Tyler Durden",
+		'YearOfBirth' = 1970,
 		'Phones' = ["+375005550000", "+375115550000"]
 	}.
+
+-type ok_or_error() :: ok | error.
+
+-spec 'StoreUser'( User :: #'User'{}, FailIfExists :: boolean() ) -> ok_or_error().
+'StoreUser'( _User, _FailIfExists ) ->
+	ok.
