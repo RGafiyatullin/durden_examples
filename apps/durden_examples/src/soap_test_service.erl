@@ -19,6 +19,7 @@
 
 -spec 'GetUserByID'( ID :: uuid() ) -> #'User'{}.
 'GetUserByID'( ID ) ->
+	io:format("~p:'GetUserByID'(~p)~n", [?MODULE, ID]),
 	#'User'{
 		'ID' = ID,
 		'Name' = "Tyler Durden",
@@ -29,5 +30,6 @@
 -type ok_or_error() :: ok | error.
 
 -spec 'StoreUser'( User :: #'User'{}, FailIfExists :: boolean() ) -> ok_or_error().
-'StoreUser'( _User, _FailIfExists ) ->
+'StoreUser'( User, FailIfExists ) ->
+	io:format("~p:'StoreUser'(~p, ~p)~n", [?MODULE, User, FailIfExists]),
 	ok.
