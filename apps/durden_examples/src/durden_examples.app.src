@@ -7,8 +7,9 @@
                   kernel,
                   stdlib,
                   cowboy,
-                  durden
+                  durden,
+                  kyte
                  ]},
-  % {mod, {durden_examples_app, []} },
+  {mod, {durden_examples_app, []} },
   {env, []}
  ]}.

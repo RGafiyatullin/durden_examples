@@ -1,5 +1,5 @@
 
-WSDL = wsdl2
+WSDL = wsdl
 CSC = dmcs
 MONO = mono
 

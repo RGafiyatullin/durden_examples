@@ -8,7 +8,8 @@ test() ->
 start() ->
 	Dispatch = [
 		%% {Host, list({Path, Handler, Opts})}
-		{'_', [{[<<"test">>, <<"service.asmx">>, '...'], soap_test_service, [] }]}
+		% {'_', [{[<<"test">>, <<"service.asmx">>, '...'], soap_test_service, [] }]},
+		{'_', [{[<<"pb">>, <<"v0.asmx">>, '...'], phone_book_soap, [] }]}
 	],
 	cowboy:start_listener(my_http_listener, 100,
 		cowboy_tcp_transport, [{port, 8080}],
